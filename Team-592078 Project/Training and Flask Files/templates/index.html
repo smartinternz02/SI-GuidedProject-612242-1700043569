@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                background-color: black;
+                margin-left: 32%;
+            }
+            h2{
+                color: orange;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            form{
+                color:white;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            input[type="text"]{
+                width:500px;
+                height:25px;
+            }
+            button{
+                background-color: orange;
+                width :500px;
+                height: 30px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Please enter the following details</h2>
+        <form action="{{ url_for("submit") }}" method="post">
+            <label for="fname">Longitude of your Location:</label><br>
+            <br><input type="text" id="longitude" name="longitude" size="50"><br>
+            <br><label for="fname">Latitude of your location:</label><br>
+            <br><input type="text" id="lat" size="50" name="lat"><br>
+            <br><label for="fname">Month cloud cover in percent:</label><br>
+            <br><input type="text" id="cloud_cover" size="50" name="cloud_cover"><br>
+            <br><label for="fname">Dirunal Temperature in celcius:</label><br>
+            <br><input type="text" id="dirunal_temperature_range" size="50" name="dirunal_temperature_range"><br>
+            <br><label for="fname">Frost day frequency in a month:</label><br>
+            <br><input type="text" id="frost_day_frequency" size="50" name="frost_day_frequency"><br>
+            <br><label for="fname">Potential evapotranspiration in millimetres perday:</label><br>
+            <br><input type="text" id="evapotranspiration" size="50" name="evapotranspiration"><br>
+            <br><label for="fname">Amount of Humidity:</label><br>
+            <br><input type="text" id="precipitation" size="50" name="precipitation"><br>
+            <br><label for="fname">Minimum Temperature of the day:</label><br>
+            <br><input type="text" id="tmn" size="50" name="tmn"><br>
+            <br><label for="fname">Mean Temperature of the day:</label><br>
+            <br><input type="text" id="tmp" size="50" name="tmp"><br>
+            <br><label for="fname">Maximum Temperature of the day:</label><br>
+            <br><input type="text" id="tmx" size="50" name="tmx"><br>
+            <br><label for="fname">The vapour pressure of the air:</label><br>
+            <br><input type="text" id="vap" size="50" name="vap"><br>
+            <br><label for="fname">Is it a wet day?(1 or 0):</label><br>
+            <br><input type="text" id="wet_day" size="50" name="wet_day"><br>
+            <br><label for="fname">The height of the location above sea level:</label><br>
+            <br><input type="text" id="elevation" size="50" name="elevation"><br>
+            <br><label for="fname">Type of land cover:</label><br>
+            <br><input type="text" id="dominant_land_cover" size="50" name="dominant_land_cover"><br>
+            <br><label for="fname">Enter your country name:</label><br>
+            <br><input type="text" id="country" size="50" name="country"><br>
+            <br><label for="fname">Enter your region:</label><br>
+            <br><input type="text" id="region" size="50" name="region"><br>
+            <br><button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
